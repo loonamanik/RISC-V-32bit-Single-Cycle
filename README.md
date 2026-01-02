@@ -7,7 +7,10 @@ The waveform below demonstrates the correct execution of the test program:
 1. `addi x5, x0, 5`  -> Register x5 = 5
 2. `addi x6, x0, 10` -> Register x6 = 10
 3. `or x7, x5, x6`   -> Register x7 = 15
+## 🏗️ Processor Architecture
+The design follows a standard single-cycle RISC-V datapath. It includes a Control Unit for instruction decoding, a 32x32 Register File, and an ALU for arithmetic operations.
 
+![Architecture Diagram](./architecture.png)
 ![Functional Verification Waveform](./waveform.png)
 
 ## 🛠️ Instructions for Running
