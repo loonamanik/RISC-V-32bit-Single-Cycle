@@ -13,4 +13,4 @@ The waveform below demonstrates the correct execution of the test program:
 ## 🛠️ Instructions for Running
 1. Load the `memfile.hex` into the Instruction Memory.
 2. Run the testbench `Single_Cycle_Top_Tb.v`.
-3. Ensure the reset pulse is released at 15ns to capture the first instruction.
+3. Ensure the reset pulse is released at 10ns to capture the first instruction.
