@@ -13,7 +13,16 @@ The waveform below demonstrates the correct execution of the test program:
 2. `addi x6, x0, 10` -> Register x6 = 10
 3. `or x7, x5, x6`   -> Register x7 = 15
 ![Functional Verification Waveform](./waveform.png)
+The processor has been verified using a test program that performs a Store-to-Load sequence.
 
+Test Program (Assembly):
+Code snippet
+
+addi x5, x0, 20  // Set Base Address = 20
+addi x6, x0, 99  // Set Data to Store = 99
+sw x6, 0(x5)     // Store 99 into Memory[20]
+lw x7, 0(x5)     // Load Memory[20] into x7
+![Functional Verification Waveform](./waveform_mem.png)
 ## 🛠️ Instructions for Running
 1. Load the `memfile.hex` into the Instruction Memory.
 2. Run the testbench `Single_Cycle_Top_Tb.v`.

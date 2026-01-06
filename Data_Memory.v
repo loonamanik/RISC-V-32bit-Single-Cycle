@@ -9,10 +9,10 @@ module Data_Memory(clk,rst,WE,WD,A,RD);
     always @ (posedge clk)
     begin
         if(WE)
-            mem[A] <= WD;
+            mem[A[31:2]] <= WD;
     end
 
-    assign RD = (rst) ? 32'd0 : mem[A];
+    assign RD = (rst) ? 32'd0 : mem[A[31:2]];
 
     // initial begin
     //     mem[28] = 32'h00000020;

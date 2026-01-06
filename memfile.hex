@@ -1,5 +1,5 @@
 @00000000
-00500293  // addi x5, x0, 5  (Put 5 in x5)
-00A00313  // addi x6, x0, 10 (Put 10 in x6)
-0062E3B3  // or   x7, x5, x6 (x7 should become 15)
-0062F433  // and  x8, x5, x6 (x8 should become 0)
+01400293 // addi x5, x0, 20  -> Set x5 (Base Address) to 20
+06300313 // addi x6, x0, 99  -> Set x6 (Data to Store) to 99
+0062A023 // sw x6, 0(x5)     -> Store value of x6 into Memory at Address [x5 + 0]
+0002A383 // lw x7, 0(x5)     -> Load value from Memory Address [x5 + 0] into x7
